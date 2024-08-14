@@ -102,14 +102,14 @@ const Page = () => {
             </p>
             <ol>
               <li>
-                Blood-Stained Knife - Found under the victim's armchair. The
-                handle is wiped clean, but the blade has traces of both Romano's
-                and another person's blood.
+                Blood-Stained Knife - Found under the victim&apos;s armchair.
+                The handle is wiped clean, but the blade has traces of both
+                Romano&apos;s and another person&apos;s blood.
               </li>
               <li>
-                Witness Testimony - Lena was seen leaving Romano’s suite in a
-                hurry around the time of the murder. She claims Romano was alive
-                when she left.
+                Witness Testimony - Lena was seen leaving Romano&apos;s suite in
+                a hurry around the time of the murder. She claims Romano was
+                alive when she left.
               </li>
               <li>
                 Security Footage - Shows Vince entering the suite just before
@@ -122,7 +122,7 @@ const Page = () => {
               </li>
               <li>
                 Drug Analysis - A large amount of cocaine was found on the
-                scene, but only Romano's prints are on the bag.
+                scene, but only Romano&apos;s prints are on the bag.
               </li>
               <li>
                 Anonymous Tip - The police received an anonymous tip that Romano
