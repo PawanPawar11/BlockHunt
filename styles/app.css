@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Gloock&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mystery-text {
+  margin-bottom: 20px;
+}
+.mystery-text h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+.mystery-text b {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+}
+
+.mystery-description {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  white-space: pre-wrap;
+}
+
+.mystery-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+.input-area form {
+  display: flex;
+  flex-direction: column;
+}
+.input-area form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.input-area form textarea {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+.input-area form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.input-area form button:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=app.css.map */

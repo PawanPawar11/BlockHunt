@@ -7,10 +7,27 @@ import "@styles/app.scss";
 const Page = () => {
   const [deduction, setDeduction] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Deduction submitted:", deduction);
-    setDeduction("");
+
+    try {
+      const response = await fetch("/api/senddata", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ deduction }),
+      });
+
+      if (response.ok) {
+        console.log("Deduction submitted:", deduction);
+        setDeduction("");
+      } else {
+        console.error("Failed to submit deduction");
+      }
+    } catch (error) {
+      console.error("Error submitting deduction:", error);
+    }
   };
 
   return (
@@ -96,7 +113,7 @@ const Page = () => {
             />
           </div>
           <div>
-            <p>
+            <p className="cinzel-font">
               <b>Clues and Hints:</b>
               <br />
             </p>
@@ -132,8 +149,10 @@ const Page = () => {
           </div>
         </div>
         <div className="input-area">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="deduction">Enter Your Deduction:</label>
+          <form onSubmit={handleSubmit} action="/senddata" method="post">
+            <label className="cinzel-font" htmlFor="deduction">
+              Enter Your Deduction:
+            </label>
             <textarea
               id="deduction"
               rows="4"
@@ -142,6 +161,7 @@ const Page = () => {
               value={deduction}
               onChange={(e) => setDeduction(e.target.value)}
               style={{ resize: "none" }}
+              name="deduction"
             />
             <button type="submit">Submit Mystery</button>
           </form>
