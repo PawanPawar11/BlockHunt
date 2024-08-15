@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import "@styles/app.scss";
 
 const Page = () => {
@@ -195,6 +196,22 @@ const Page = () => {
           )}
         </div>
       </div>
+
+      {/* Adding the chatbot script directly */}
+      <Script id="chatbot-config">
+        {`
+          window.embeddedChatbotConfig = {
+            chatbotId: "3e0hdOOowYENSVouFaWgi",
+            domain: "www.chatbase.co"
+          };
+        `}
+      </Script>
+      <Script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="3e0hdOOowYENSVouFaWgi"
+        domain="www.chatbase.co"
+        defer
+      />
     </>
   );
 };
