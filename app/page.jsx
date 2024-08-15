@@ -6,6 +6,7 @@ import "@styles/app.scss";
 
 const Page = () => {
   const [deduction, setDeduction] = useState("");
+  const [isCorrect, setIsCorrect] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,8 +20,10 @@ const Page = () => {
         body: JSON.stringify({ deduction }),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
-        console.log("Deduction submitted:", deduction);
+        setIsCorrect(result.correct);
         setDeduction("");
       } else {
         console.error("Failed to submit deduction");
@@ -165,6 +168,31 @@ const Page = () => {
             />
             <button type="submit">Submit Mystery</button>
           </form>
+          {isCorrect !== null && (
+            <div
+              className={`result-message ${
+                isCorrect ? "correct" : "incorrect"
+              }`}
+            >
+              {isCorrect ? (
+                <>
+                  <h3>🎉 Congratulations! 🎉</h3>
+                  <p>
+                    Your deduction is spot on! You&apos;ve cracked the case and
+                    uncovered the real culprit.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <h3>🔍 Try Again 🔍</h3>
+                  <p>
+                    Your deduction is not correct. Keep investigating and
+                    looking for more clues!
+                  </p>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>

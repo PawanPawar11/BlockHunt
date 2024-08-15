@@ -5,6 +5,10 @@ const DeductionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  correctAnswer: {
+    type: String,
+    required: true,
+  },
 });
 
 const Deduction =
