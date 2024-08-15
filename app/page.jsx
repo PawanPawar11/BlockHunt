@@ -201,14 +201,14 @@ const Page = () => {
       <Script id="chatbot-config">
         {`
           window.embeddedChatbotConfig = {
-            chatbotId: "3e0hdOOowYENSVouFaWgi",
+            chatbotId: "0BGRYxvxUsTvzWOp-iSHf",
             domain: "www.chatbase.co"
           };
         `}
       </Script>
       <Script
         src="https://www.chatbase.co/embed.min.js"
-        chatbotId="3e0hdOOowYENSVouFaWgi"
+        chatbotId="0BGRYxvxUsTvzWOp-iSHf"
         domain="www.chatbase.co"
         defer
       />
